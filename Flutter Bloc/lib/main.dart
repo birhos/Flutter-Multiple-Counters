@@ -40,8 +40,10 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData.dark(),
       title: "Flutter Bloc Counter Example",
       home: BlocBuilder<CounterBloc, int>(
-        bloc: sayacBloc,
-        builder: (context, count) {
+        cubit: sayacBloc,
+
+        //
+        builder: (BuildContext context, int count) {
           return Scaffold(
             appBar: AppBar(
               title: Text(
